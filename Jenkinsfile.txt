@@ -11,10 +11,9 @@ pipeline {
             bat 'mvn clean install'
         }
     }
-    stage('Deploy Standalone') {
+    stage('Deploy CloudHub') { 
         steps {
-            bat 'winpty docker run -i -p 8092:8092 -t stand-mule'
-            bat 'mvn deploy -P standalone -Dmule.home=/opt/mule' 
+            bat 'mvn clean deploy -DmuleDeploy' 
         }
     }
   }
