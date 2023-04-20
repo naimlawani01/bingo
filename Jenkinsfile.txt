@@ -16,5 +16,13 @@ pipeline {
             bat 'mvn clean deploy -DmuleDeploy' 
         }
     }
+    stage('Deploy Standalone') {
+        steps {
+            bat 'docker run -i -p 8092:8092 -t stand-mule' 
+        }
+        steps {
+            bat 'mvn deploy -P standalone -Dmule.home=/opt/mule' 
+        }
+    }
   }
 }
