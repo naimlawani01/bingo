@@ -30,15 +30,18 @@
 				<version>3.7.1</version>
 				<extensions>true</extensions>
 				<configuration>
-				    <armDeployment>
-				      <muleVersion>4.4.0</muleVersion>
-				      <uri>https://anypoint.mulesoft.com</uri>
-				      <target>app-jenk</target>
-				      <targetType>server</targetType>
-				      <username>destboss</username>
-				      <password>Najath0125.@</password>
-				      <environment>Sandbox</environment>
-				    </armDeployment>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.4.0</muleVersion>
+						<username>destboss</username>
+						<password>Najath0125.@</password>
+						<environment>Sandbox</environment>
+						<applicationName>bingo</applicationName>
+						<businessGroup>cap4l</businessGroup>
+						<workerType>micro</workerType>
+						<workers>1</workers>
+					</cloudHubDeployment>
+					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
